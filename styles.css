@@ -1,0 +1,56 @@
+
+body{
+    background: url(./asset/image/IMG_E0291.JPG) center/cover;
+    /* center pour centrer l'image et cover pour double */
+    min-height: 100vh;
+        /* permet que l'image prend 100% (vh) de l'ecrant selon les utilisateur vh */
+
+}
+
+h1{
+   text-align: center;  /* premet de center du texte */
+    text-transform: capitalize; /*  permet de mettre le text en capitale miniscule et autres */
+    letter-spacing: 3px; /* premet de mettrer de l'espace entrer les lettres */
+     text-shadow: -1px -1px 4px blue; /*permet de mettre de l'ombre */
+   font-size: 2.5 rem;  /*  controle la taile du text de mettrer toujour du rem pour uniter de messure */
+    color: aqua; /* pour mettrer de la couleur */
+}
+
+main{
+    height: 500px;
+    width: 90%;
+    background-color:rgba(245,245, 245, 0.7);
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 2px;
+}
+
+h2{
+    margin:  0px;
+}
+
+.flexbox{
+    padding: 10px;
+    margin-top: 20px;
+    margin-top: 10px;
+    border: 2px solid black;
+    border-radius: 16px;
+}
+.flexbox ul{
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.flexbox li{
+    list-style: none;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center; /* permet de mettrer le texte au centre sur la verticale*/
+    align-items: center; /* centrer sur la verticale*/
+    
+}
