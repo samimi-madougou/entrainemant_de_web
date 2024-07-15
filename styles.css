@@ -12,31 +12,35 @@ h1{
     text-transform: capitalize; /*  permet de mettre le text en capitale miniscule et autres */
     letter-spacing: 3px; /* premet de mettrer de l'espace entrer les lettres */
      text-shadow: -1px -1px 4px blue; /*permet de mettre de l'ombre */
-   font-size: 2.5 rem;  /*  controle la taile du text de mettrer toujour du rem pour uniter de messure */
+   font-size: 2.5rem;  /*  controle la taile du text de mettrer toujour du rem pour uniter de messure */
     color: aqua; /* pour mettrer de la couleur */
 }
-
+ 
 main{
-    height: 500px;
+    /* prendre 500 au minimun et aller au dela quand c'est nesesaire*/ 
+    min-height: 500px;
     width: 90%;
     background-color:rgba(245,245, 245, 0.7);
     margin: 0 auto;
     border-radius: 20px;
-    padding: 15px;
-    margin: 2px;
-}
+    padding: 15px; /*espace exterieur*/
+    /* marging espace exterieur */
+    
+} 
+
 
 h2{
     margin:  0px;
 }
 
-.flexbox{
+.flexbox, .grid, .absolut {
     padding: 10px;
     margin-top: 20px;
-    margin-top: 10px;
     border: 2px solid black;
     border-radius: 16px;
+    min-height: 150px;
 }
+
 .flexbox ul{
     padding: 0px;
     display: flex;
@@ -44,13 +48,76 @@ h2{
 
 }
 .flexbox li{
+/* supprimer le point au debut de liste */
     list-style: none;
     height: 160px;
-    width: 160px;
+    width: 160px;/* espace interieur */
     margin: 10px;
     background-color: aqua;
     display: flex;
-    justify-content: center; /* permet de mettrer le texte au centre sur la verticale*/
-    align-items: center; /* centrer sur la verticale*/
+    justify-content: center; /* permet de mettrer le texte au centre sur la verticale (du haut en haut)*/
+    align-items: center; /* centrer sur l'horizontale(sur la ligne de gauche à droit)*/
     
+}
+/* grid */
+.grid_contenaire{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.grid img {
+    /* height: 100px; */
+    width: 80%;
+    margin-top: 15px;
+}
+form{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "i1 i2" "ta ta" "vi bt";
+
+}
+input , textarea{
+    margin:5px;
+    padding:10px;
+    border: 2px solid aqua;
+    border-radius: 5px;
+}
+textarea{
+    grid-area: ta;
+    resize: none;
+    /* pour que les utilisateurs ne puissent pas modiffier la dimmention du textatea */
+
+}
+#btn_submit{
+    grid-area: bt;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#btn_submit:hover{
+    background-color: green;
+    color:white;
+}
+/* absolut  position relative au parent sinom l'enfant sera relative au body */
+.absolut{
+    position: relative;
+}
+#cercle1{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background-color: blue;
+    border-radius: 150px;
+    top:0;
+    right: 0;
+}
+#cercle2{
+    height: 40px;
+    width: 40px;
+    background-color: blueviolet;
+    position: absolute;
+    border-radius: 120px;
+    left: 50%;
+    top: 100px;
+
 }
